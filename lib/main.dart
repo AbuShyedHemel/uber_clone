@@ -7,14 +7,11 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([]);
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => AppData(),
-          child: MaterialApp(
+  runApp(ChangeNotifierProvider(
+    create: (context) => AppData(),
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-  ),
-    ));
+    ),
+  ));
 }
-
-////////////////hi
