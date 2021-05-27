@@ -42,20 +42,20 @@
 //     }
 //     return placeAddress;
 //   }
-  static import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:uber_clone/configMap.dart';
+//   static import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_database/firebase_database.dart';
+// import 'package:uber_clone/configMap.dart';
 
-void getCurrentOnlineInfo() async
-  {
-    firebaseUser = await FirebaseAuth.instance.currentUser;
-    String user = firebaseUser.uid;
-    DatabaseReference reference = FirebaseDatabase.instance.reference().child("users").child(userId);
+// void getCurrentOnlineInfo() async
+//   {
+//     firebaseUser = await FirebaseAuth.instance.currentUser;
+//     String user = firebaseUser.uid;
+//     DatabaseReference reference = FirebaseDatabase.instance.reference().child("users").child(userId);
 
-    reference.once().then(DataSnapshot dataSnapshot){
-      if (dataSnapshot.value != null) {
-        Users users = Users.fromSnapshot(dataSnapshot);
-      }
-    };
-  }
+//     reference.once().then(DataSnapshot dataSnapshot){
+//       if (dataSnapshot.value != null) {
+//         Users users = Users.fromSnapshot(dataSnapshot);
+//       }
+//     };
+//   }
 // }
